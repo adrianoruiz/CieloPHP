@@ -1,0 +1,802 @@
+***********************************************
+2015-09-21 22:10:17:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/carrinhoCartaoPagamento.php
+OPERAÇÃO: Requisicao Tid
+ENVIO: <?xml version="1.0" encoding="ISO-8859-1" ?>
+<requisicao-tid id="4e545ab60a938d73ab32ba9940fd0aa8" versao ="1.1.0">
+   <dados-ec>
+      <numero>1006993069</numero>
+      <chave>25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3</chave>
+   </dados-ec>
+   <forma-pagamento>
+      <bandeira>visa</bandeira>
+      <produto>1</produto>
+      <parcelas>1</parcelas>
+   </forma-pagamento>
+</requisicao-tid>
+
+***********************************************
+2015-09-21 22:10:17:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/carrinhoCartaoPagamento.php
+OPERAÇÃO: Requisicao Tid
+RESPOSTA: <?xml version="1.0" encoding="ISO-8859-1"?>
+<retorno-tid id="4e545ab60a938d73ab32ba9940fd0aa8" versao="1.1.0" xmlns="http://ecommerce.cbmp.com.br">
+  <tid>100699306947643A1001</tid>
+</retorno-tid>
+
+
+***********************************************
+2015-09-21 22:10:17:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/carrinhoCartaoPagamento.php
+OPERAÇÃO: Autorizacao Portador
+ENVIO: <?xml version="1.0" encoding="ISO-8859-1" ?>
+<requisicao-autorizacao-portador id="4e545ab60a938d73ab32ba9940fd0aa8" versao ="1.1.0">
+<tid>100699306947643A1001</tid>
+   <dados-ec>
+      <numero>1006993069</numero>
+      <chave>25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3</chave>
+   </dados-ec>
+   <dados-cartao>
+      <numero>4551870000000183</numero>
+      <validade>201508</validade>
+      <indicador>1</indicador>
+      <codigo-seguranca>973</codigo-seguranca>
+   </dados-cartao>
+   <dados-pedido>
+      <numero>8043538</numero>
+      <valor>10000</valor>
+      <moeda>986</moeda>
+      <data-hora>2015-09-21T22:10:17</data-hora>
+      <idioma>PT</idioma>
+   </dados-pedido>
+   <forma-pagamento>
+      <bandeira>visa</bandeira>
+      <produto>1</produto>
+      <parcelas>1</parcelas>
+   </forma-pagamento>
+   <capturar-automaticamente>false</capturar-automaticamente>
+</requisicao-autorizacao-portador>
+
+***********************************************
+2015-09-21 22:10:18:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/carrinhoCartaoPagamento.php
+OPERAÇÃO: Autorizacao Portador
+RESPOSTA: <?xml version="1.0" encoding="ISO-8859-1"?>
+<transacao versao="1.1.0" id="4e545ab60a938d73ab32ba9940fd0aa8" xmlns="http://ecommerce.cbmp.com.br">
+  <tid>100699306947643A1001</tid>
+  <pan>uv9yI5tkhX9jpuCt+dfrtoSVM4U3gIjvrcwMBfZcadE=</pan>
+  <dados-pedido>
+    <numero>8043538</numero>
+    <valor>10000</valor>
+    <moeda>986</moeda>
+    <data-hora>2015-09-21T22:10:18.129-03:00</data-hora>
+    <idioma>PT</idioma>
+  </dados-pedido>
+  <forma-pagamento>
+    <bandeira>visa</bandeira>
+    <produto>1</produto>
+    <parcelas>1</parcelas>
+  </forma-pagamento>
+  <status>4</status>
+  <autenticacao>
+    <codigo>4</codigo>
+    <mensagem>Transacao sem autenticacao</mensagem>
+    <data-hora>2015-09-21T22:10:18.163-03:00</data-hora>
+    <valor>10000</valor>
+    <eci>7</eci>
+  </autenticacao>
+  <autorizacao>
+    <codigo>4</codigo>
+    <mensagem>Transação autorizada</mensagem>
+    <data-hora>2015-09-21T22:10:18.167-03:00</data-hora>
+    <valor>10000</valor>
+    <lr>00</lr>
+    <arp>123456</arp>
+  </autorizacao>
+</transacao>
+
+
+***********************************************
+2015-09-21 22:10:18:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/retorno.php
+OPERAÇÃO: Consulta
+ENVIO: <?xml version="1.0" encoding="ISO-8859-1" ?>
+<requisicao-consulta id="06f7ac48980775c3c3084252c11f97b6" versao="1.1.0">
+   <tid>100699306947643A1001</tid>
+   <dados-ec>
+      <numero>1006993069</numero>
+      <chave>25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3</chave>
+   </dados-ec>
+</requisicao-consulta>
+
+***********************************************
+2015-09-21 22:10:18:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/retorno.php
+OPERAÇÃO: Consulta
+RESPOSTA: <?xml version="1.0" encoding="ISO-8859-1"?>
+<transacao versao="1.1.0" id="06f7ac48980775c3c3084252c11f97b6" xmlns="http://ecommerce.cbmp.com.br">
+  <tid>100699306947643A1001</tid>
+  <pan>uv9yI5tkhX9jpuCt+dfrtoSVM4U3gIjvrcwMBfZcadE=</pan>
+  <dados-pedido>
+    <numero>8043538</numero>
+    <valor>10000</valor>
+    <moeda>986</moeda>
+    <data-hora>2015-09-21T22:10:18.129-03:00</data-hora>
+    <idioma>PT</idioma>
+  </dados-pedido>
+  <forma-pagamento>
+    <bandeira>visa</bandeira>
+    <produto>1</produto>
+    <parcelas>1</parcelas>
+  </forma-pagamento>
+  <status>4</status>
+  <autenticacao>
+    <codigo>4</codigo>
+    <mensagem>Transacao sem autenticacao</mensagem>
+    <data-hora>2015-09-21T22:10:18.163-03:00</data-hora>
+    <valor>10000</valor>
+    <eci>7</eci>
+  </autenticacao>
+  <autorizacao>
+    <codigo>4</codigo>
+    <mensagem>Transação autorizada</mensagem>
+    <data-hora>2015-09-21T22:10:18.167-03:00</data-hora>
+    <valor>10000</valor>
+    <lr>00</lr>
+    <arp>123456</arp>
+  </autorizacao>
+</transacao>
+
+
+***********************************************
+2015-09-21 22:10:42:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/carrinhoCartaoPagamento.php
+OPERAÇÃO: Requisicao Tid
+ENVIO: <?xml version="1.0" encoding="ISO-8859-1" ?>
+<requisicao-tid id="ac685c64844a08f87ab867c59213ca13" versao ="1.1.0">
+   <dados-ec>
+      <numero>1006993069</numero>
+      <chave>25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3</chave>
+   </dados-ec>
+   <forma-pagamento>
+      <bandeira>visa</bandeira>
+      <produto>1</produto>
+      <parcelas>1</parcelas>
+   </forma-pagamento>
+</requisicao-tid>
+
+***********************************************
+2015-09-21 22:10:42:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/carrinhoCartaoPagamento.php
+OPERAÇÃO: Requisicao Tid
+RESPOSTA: <?xml version="1.0" encoding="ISO-8859-1"?>
+<retorno-tid id="ac685c64844a08f87ab867c59213ca13" versao="1.1.0" xmlns="http://ecommerce.cbmp.com.br">
+  <tid>100699306947643B1001</tid>
+</retorno-tid>
+
+
+***********************************************
+2015-09-21 22:10:42:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/carrinhoCartaoPagamento.php
+OPERAÇÃO: Autorizacao Portador
+ENVIO: <?xml version="1.0" encoding="ISO-8859-1" ?>
+<requisicao-autorizacao-portador id="ac685c64844a08f87ab867c59213ca13" versao ="1.1.0">
+<tid>100699306947643B1001</tid>
+   <dados-ec>
+      <numero>1006993069</numero>
+      <chave>25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3</chave>
+   </dados-ec>
+   <dados-cartao>
+      <numero>4551870000000183</numero>
+      <validade>201508</validade>
+      <indicador>1</indicador>
+      <codigo-seguranca>973</codigo-seguranca>
+   </dados-cartao>
+   <dados-pedido>
+      <numero>9587836</numero>
+      <valor>10000</valor>
+      <moeda>986</moeda>
+      <data-hora>2015-09-21T22:10:42</data-hora>
+      <idioma>PT</idioma>
+   </dados-pedido>
+   <forma-pagamento>
+      <bandeira>visa</bandeira>
+      <produto>1</produto>
+      <parcelas>1</parcelas>
+   </forma-pagamento>
+   <capturar-automaticamente>false</capturar-automaticamente>
+</requisicao-autorizacao-portador>
+
+***********************************************
+2015-09-21 22:10:42:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/carrinhoCartaoPagamento.php
+OPERAÇÃO: Autorizacao Portador
+RESPOSTA: <?xml version="1.0" encoding="ISO-8859-1"?>
+<transacao versao="1.1.0" id="ac685c64844a08f87ab867c59213ca13" xmlns="http://ecommerce.cbmp.com.br">
+  <tid>100699306947643B1001</tid>
+  <pan>uv9yI5tkhX9jpuCt+dfrtoSVM4U3gIjvrcwMBfZcadE=</pan>
+  <dados-pedido>
+    <numero>9587836</numero>
+    <valor>10000</valor>
+    <moeda>986</moeda>
+    <data-hora>2015-09-21T22:10:42.850-03:00</data-hora>
+    <idioma>PT</idioma>
+  </dados-pedido>
+  <forma-pagamento>
+    <bandeira>visa</bandeira>
+    <produto>1</produto>
+    <parcelas>1</parcelas>
+  </forma-pagamento>
+  <status>4</status>
+  <autenticacao>
+    <codigo>4</codigo>
+    <mensagem>Transacao sem autenticacao</mensagem>
+    <data-hora>2015-09-21T22:10:42.879-03:00</data-hora>
+    <valor>10000</valor>
+    <eci>7</eci>
+  </autenticacao>
+  <autorizacao>
+    <codigo>4</codigo>
+    <mensagem>Transação autorizada</mensagem>
+    <data-hora>2015-09-21T22:10:42.883-03:00</data-hora>
+    <valor>10000</valor>
+    <lr>00</lr>
+    <arp>123456</arp>
+  </autorizacao>
+</transacao>
+
+
+***********************************************
+2015-09-21 22:10:43:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/retorno.php
+OPERAÇÃO: Consulta
+ENVIO: <?xml version="1.0" encoding="ISO-8859-1" ?>
+<requisicao-consulta id="7df6c32a1508c8f209d95044d606318e" versao="1.1.0">
+   <tid>100699306947643B1001</tid>
+   <dados-ec>
+      <numero>1006993069</numero>
+      <chave>25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3</chave>
+   </dados-ec>
+</requisicao-consulta>
+
+***********************************************
+2015-09-21 22:10:43:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/retorno.php
+OPERAÇÃO: Consulta
+RESPOSTA: <?xml version="1.0" encoding="ISO-8859-1"?>
+<transacao versao="1.1.0" id="7df6c32a1508c8f209d95044d606318e" xmlns="http://ecommerce.cbmp.com.br">
+  <tid>100699306947643B1001</tid>
+  <pan>uv9yI5tkhX9jpuCt+dfrtoSVM4U3gIjvrcwMBfZcadE=</pan>
+  <dados-pedido>
+    <numero>9587836</numero>
+    <valor>10000</valor>
+    <moeda>986</moeda>
+    <data-hora>2015-09-21T22:10:42.850-03:00</data-hora>
+    <idioma>PT</idioma>
+  </dados-pedido>
+  <forma-pagamento>
+    <bandeira>visa</bandeira>
+    <produto>1</produto>
+    <parcelas>1</parcelas>
+  </forma-pagamento>
+  <status>4</status>
+  <autenticacao>
+    <codigo>4</codigo>
+    <mensagem>Transacao sem autenticacao</mensagem>
+    <data-hora>2015-09-21T22:10:42.879-03:00</data-hora>
+    <valor>10000</valor>
+    <eci>7</eci>
+  </autenticacao>
+  <autorizacao>
+    <codigo>4</codigo>
+    <mensagem>Transação autorizada</mensagem>
+    <data-hora>2015-09-21T22:10:42.883-03:00</data-hora>
+    <valor>10000</valor>
+    <lr>00</lr>
+    <arp>123456</arp>
+  </autorizacao>
+</transacao>
+
+
+***********************************************
+2015-09-21 22:11:28:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/retorno.php
+OPERAÇÃO: Consulta
+ENVIO: <?xml version="1.0" encoding="ISO-8859-1" ?>
+<requisicao-consulta id="29d8077857e11b4804bf1f08654efb15" versao="1.1.0">
+   <tid>100699306947643B1001</tid>
+   <dados-ec>
+      <numero>1006993069</numero>
+      <chave>25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3</chave>
+   </dados-ec>
+</requisicao-consulta>
+
+***********************************************
+2015-09-21 22:11:30:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/retorno.php
+OPERAÇÃO: Consulta
+RESPOSTA: <?xml version="1.0" encoding="ISO-8859-1"?>
+<transacao versao="1.1.0" id="29d8077857e11b4804bf1f08654efb15" xmlns="http://ecommerce.cbmp.com.br">
+  <tid>100699306947643B1001</tid>
+  <pan>uv9yI5tkhX9jpuCt+dfrtoSVM4U3gIjvrcwMBfZcadE=</pan>
+  <dados-pedido>
+    <numero>9587836</numero>
+    <valor>10000</valor>
+    <moeda>986</moeda>
+    <data-hora>2015-09-21T22:10:42.850-03:00</data-hora>
+    <idioma>PT</idioma>
+  </dados-pedido>
+  <forma-pagamento>
+    <bandeira>visa</bandeira>
+    <produto>1</produto>
+    <parcelas>1</parcelas>
+  </forma-pagamento>
+  <status>4</status>
+  <autenticacao>
+    <codigo>4</codigo>
+    <mensagem>Transacao sem autenticacao</mensagem>
+    <data-hora>2015-09-21T22:10:42.879-03:00</data-hora>
+    <valor>10000</valor>
+    <eci>7</eci>
+  </autenticacao>
+  <autorizacao>
+    <codigo>4</codigo>
+    <mensagem>Transação autorizada</mensagem>
+    <data-hora>2015-09-21T22:10:42.883-03:00</data-hora>
+    <valor>10000</valor>
+    <lr>00</lr>
+    <arp>123456</arp>
+  </autorizacao>
+</transacao>
+
+
+***********************************************
+2015-09-28 15:59:34:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/carrinhoCartaoPagamento.php
+OPERAÇÃO: Requisicao Tid
+ENVIO: <?xml version="1.0" encoding="ISO-8859-1" ?>
+<requisicao-tid id="5d1f6f0f5c1da24ec70055b464f15df1" versao ="1.1.0">
+   <dados-ec>
+      <numero>1006993069</numero>
+      <chave>25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3</chave>
+   </dados-ec>
+   <forma-pagamento>
+      <bandeira>visa</bandeira>
+      <produto>1</produto>
+      <parcelas>1</parcelas>
+   </forma-pagamento>
+</requisicao-tid>
+
+***********************************************
+2015-09-28 15:59:35:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/carrinhoCartaoPagamento.php
+OPERAÇÃO: Requisicao Tid
+RESPOSTA: <?xml version="1.0" encoding="ISO-8859-1"?>
+<retorno-tid id="5d1f6f0f5c1da24ec70055b464f15df1" versao="1.1.0" xmlns="http://ecommerce.cbmp.com.br">
+  <tid>100699306947D3701001</tid>
+</retorno-tid>
+
+
+***********************************************
+2015-09-28 15:59:35:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/carrinhoCartaoPagamento.php
+OPERAÇÃO: Autorizacao Portador
+ENVIO: <?xml version="1.0" encoding="ISO-8859-1" ?>
+<requisicao-autorizacao-portador id="2a9d0bdd855b4a5d4473291a3fe15890" versao ="1.1.0">
+<tid>100699306947D3701001</tid>
+   <dados-ec>
+      <numero>1006993069</numero>
+      <chave>25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3</chave>
+   </dados-ec>
+   <dados-cartao>
+      <numero>4551870000000183</numero>
+      <validade>201508</validade>
+      <indicador>1</indicador>
+      <codigo-seguranca>973</codigo-seguranca>
+   </dados-cartao>
+   <dados-pedido>
+      <numero>6204759</numero>
+      <valor>10000</valor>
+      <moeda>986</moeda>
+      <data-hora>2015-09-28T15:59:35</data-hora>
+      <idioma>PT</idioma>
+   </dados-pedido>
+   <forma-pagamento>
+      <bandeira>visa</bandeira>
+      <produto>1</produto>
+      <parcelas>1</parcelas>
+   </forma-pagamento>
+   <capturar-automaticamente>false</capturar-automaticamente>
+</requisicao-autorizacao-portador>
+
+***********************************************
+2015-09-28 15:59:35:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/carrinhoCartaoPagamento.php
+OPERAÇÃO: Autorizacao Portador
+RESPOSTA: <?xml version="1.0" encoding="ISO-8859-1"?>
+<transacao versao="1.1.0" id="2a9d0bdd855b4a5d4473291a3fe15890" xmlns="http://ecommerce.cbmp.com.br">
+  <tid>100699306947D3701001</tid>
+  <pan>uv9yI5tkhX9jpuCt+dfrtoSVM4U3gIjvrcwMBfZcadE=</pan>
+  <dados-pedido>
+    <numero>6204759</numero>
+    <valor>10000</valor>
+    <moeda>986</moeda>
+    <data-hora>2015-09-28T15:59:35.170-03:00</data-hora>
+    <idioma>PT</idioma>
+  </dados-pedido>
+  <forma-pagamento>
+    <bandeira>visa</bandeira>
+    <produto>1</produto>
+    <parcelas>1</parcelas>
+  </forma-pagamento>
+  <status>4</status>
+  <autenticacao>
+    <codigo>4</codigo>
+    <mensagem>Transacao sem autenticacao</mensagem>
+    <data-hora>2015-09-28T15:59:35.226-03:00</data-hora>
+    <valor>10000</valor>
+    <eci>7</eci>
+  </autenticacao>
+  <autorizacao>
+    <codigo>4</codigo>
+    <mensagem>Transação autorizada</mensagem>
+    <data-hora>2015-09-28T15:59:35.231-03:00</data-hora>
+    <valor>10000</valor>
+    <lr>00</lr>
+    <arp>123456</arp>
+  </autorizacao>
+</transacao>
+
+
+***********************************************
+2015-09-28 15:59:35:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/retorno.php
+OPERAÇÃO: Consulta
+ENVIO: <?xml version="1.0" encoding="ISO-8859-1" ?>
+<requisicao-consulta id="2a9d0bdd855b4a5d4473291a3fe15890" versao="1.1.0">
+   <tid>100699306947D3701001</tid>
+   <dados-ec>
+      <numero>1006993069</numero>
+      <chave>25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3</chave>
+   </dados-ec>
+</requisicao-consulta>
+
+***********************************************
+2015-09-28 15:59:35:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/retorno.php
+OPERAÇÃO: Consulta
+RESPOSTA: <?xml version="1.0" encoding="ISO-8859-1"?>
+<transacao versao="1.1.0" id="2a9d0bdd855b4a5d4473291a3fe15890" xmlns="http://ecommerce.cbmp.com.br">
+  <tid>100699306947D3701001</tid>
+  <pan>uv9yI5tkhX9jpuCt+dfrtoSVM4U3gIjvrcwMBfZcadE=</pan>
+  <dados-pedido>
+    <numero>6204759</numero>
+    <valor>10000</valor>
+    <moeda>986</moeda>
+    <data-hora>2015-09-28T15:59:35.170-03:00</data-hora>
+    <idioma>PT</idioma>
+  </dados-pedido>
+  <forma-pagamento>
+    <bandeira>visa</bandeira>
+    <produto>1</produto>
+    <parcelas>1</parcelas>
+  </forma-pagamento>
+  <status>4</status>
+  <autenticacao>
+    <codigo>4</codigo>
+    <mensagem>Transacao sem autenticacao</mensagem>
+    <data-hora>2015-09-28T15:59:35.226-03:00</data-hora>
+    <valor>10000</valor>
+    <eci>7</eci>
+  </autenticacao>
+  <autorizacao>
+    <codigo>4</codigo>
+    <mensagem>Transação autorizada</mensagem>
+    <data-hora>2015-09-28T15:59:35.231-03:00</data-hora>
+    <valor>10000</valor>
+    <lr>00</lr>
+    <arp>123456</arp>
+  </autorizacao>
+</transacao>
+
+
+***********************************************
+2015-09-28 16:00:09:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/carrinhoCartaoPagamento.php
+OPERAÇÃO: Requisicao Tid
+ENVIO: <?xml version="1.0" encoding="ISO-8859-1" ?>
+<requisicao-tid id="ecab5a42c8deec3d690c72c8532f8daa" versao ="1.1.0">
+   <dados-ec>
+      <numero>1006993069</numero>
+      <chave>25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3</chave>
+   </dados-ec>
+   <forma-pagamento>
+      <bandeira>visa</bandeira>
+      <produto>1</produto>
+      <parcelas>1</parcelas>
+   </forma-pagamento>
+</requisicao-tid>
+
+***********************************************
+2015-09-28 16:00:11:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/carrinhoCartaoPagamento.php
+OPERAÇÃO: Requisicao Tid
+RESPOSTA: <?xml version="1.0" encoding="ISO-8859-1"?>
+<retorno-tid id="ecab5a42c8deec3d690c72c8532f8daa" versao="1.1.0" xmlns="http://ecommerce.cbmp.com.br">
+  <tid>100699306947D3771001</tid>
+</retorno-tid>
+
+
+***********************************************
+2015-09-28 16:00:11:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/carrinhoCartaoPagamento.php
+OPERAÇÃO: Autorizacao Portador
+ENVIO: <?xml version="1.0" encoding="ISO-8859-1" ?>
+<requisicao-autorizacao-portador id="2cd82c3360b41c03ba43f07259684532" versao ="1.1.0">
+<tid>100699306947D3771001</tid>
+   <dados-ec>
+      <numero>1006993069</numero>
+      <chave>25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3</chave>
+   </dados-ec>
+   <dados-cartao>
+      <numero>4551870000000183</numero>
+      <validade>201508</validade>
+      <indicador>1</indicador>
+      <codigo-seguranca>973</codigo-seguranca>
+   </dados-cartao>
+   <dados-pedido>
+      <numero>4843137</numero>
+      <valor>10000</valor>
+      <moeda>986</moeda>
+      <data-hora>2015-09-28T16:00:11</data-hora>
+      <idioma>PT</idioma>
+   </dados-pedido>
+   <forma-pagamento>
+      <bandeira>visa</bandeira>
+      <produto>1</produto>
+      <parcelas>1</parcelas>
+   </forma-pagamento>
+   <capturar-automaticamente>false</capturar-automaticamente>
+</requisicao-autorizacao-portador>
+
+***********************************************
+2015-09-28 16:00:11:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/carrinhoCartaoPagamento.php
+OPERAÇÃO: Autorizacao Portador
+RESPOSTA: <?xml version="1.0" encoding="ISO-8859-1"?>
+<transacao versao="1.1.0" id="2cd82c3360b41c03ba43f07259684532" xmlns="http://ecommerce.cbmp.com.br">
+  <tid>100699306947D3771001</tid>
+  <pan>uv9yI5tkhX9jpuCt+dfrtoSVM4U3gIjvrcwMBfZcadE=</pan>
+  <dados-pedido>
+    <numero>4843137</numero>
+    <valor>10000</valor>
+    <moeda>986</moeda>
+    <data-hora>2015-09-28T16:00:11.558-03:00</data-hora>
+    <idioma>PT</idioma>
+  </dados-pedido>
+  <forma-pagamento>
+    <bandeira>visa</bandeira>
+    <produto>1</produto>
+    <parcelas>1</parcelas>
+  </forma-pagamento>
+  <status>4</status>
+  <autenticacao>
+    <codigo>4</codigo>
+    <mensagem>Transacao sem autenticacao</mensagem>
+    <data-hora>2015-09-28T16:00:11.595-03:00</data-hora>
+    <valor>10000</valor>
+    <eci>7</eci>
+  </autenticacao>
+  <autorizacao>
+    <codigo>4</codigo>
+    <mensagem>Transação autorizada</mensagem>
+    <data-hora>2015-09-28T16:00:11.599-03:00</data-hora>
+    <valor>10000</valor>
+    <lr>00</lr>
+    <arp>123456</arp>
+  </autorizacao>
+</transacao>
+
+
+***********************************************
+2015-09-28 16:00:11:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/retorno.php
+OPERAÇÃO: Consulta
+ENVIO: <?xml version="1.0" encoding="ISO-8859-1" ?>
+<requisicao-consulta id="2cd82c3360b41c03ba43f07259684532" versao="1.1.0">
+   <tid>100699306947D3771001</tid>
+   <dados-ec>
+      <numero>1006993069</numero>
+      <chave>25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3</chave>
+   </dados-ec>
+</requisicao-consulta>
+
+***********************************************
+2015-09-28 16:00:12:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/retorno.php
+OPERAÇÃO: Consulta
+RESPOSTA: <?xml version="1.0" encoding="ISO-8859-1"?>
+<transacao versao="1.1.0" id="2cd82c3360b41c03ba43f07259684532" xmlns="http://ecommerce.cbmp.com.br">
+  <tid>100699306947D3771001</tid>
+  <pan>uv9yI5tkhX9jpuCt+dfrtoSVM4U3gIjvrcwMBfZcadE=</pan>
+  <dados-pedido>
+    <numero>4843137</numero>
+    <valor>10000</valor>
+    <moeda>986</moeda>
+    <data-hora>2015-09-28T16:00:11.558-03:00</data-hora>
+    <idioma>PT</idioma>
+  </dados-pedido>
+  <forma-pagamento>
+    <bandeira>visa</bandeira>
+    <produto>1</produto>
+    <parcelas>1</parcelas>
+  </forma-pagamento>
+  <status>4</status>
+  <autenticacao>
+    <codigo>4</codigo>
+    <mensagem>Transacao sem autenticacao</mensagem>
+    <data-hora>2015-09-28T16:00:11.595-03:00</data-hora>
+    <valor>10000</valor>
+    <eci>7</eci>
+  </autenticacao>
+  <autorizacao>
+    <codigo>4</codigo>
+    <mensagem>Transação autorizada</mensagem>
+    <data-hora>2015-09-28T16:00:11.599-03:00</data-hora>
+    <valor>10000</valor>
+    <lr>00</lr>
+    <arp>123456</arp>
+  </autorizacao>
+</transacao>
+
+
+***********************************************
+2015-09-28 16:00:31:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/carrinhoCartaoPagamento.php
+OPERAÇÃO: Requisicao Tid
+ENVIO: <?xml version="1.0" encoding="ISO-8859-1" ?>
+<requisicao-tid id="e4bad7e1381a345ca2af13d8de0182da" versao ="1.1.0">
+   <dados-ec>
+      <numero>1006993069</numero>
+      <chave>25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3</chave>
+   </dados-ec>
+   <forma-pagamento>
+      <bandeira>visa</bandeira>
+      <produto>1</produto>
+      <parcelas>1</parcelas>
+   </forma-pagamento>
+</requisicao-tid>
+
+***********************************************
+2015-09-28 16:00:33:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/carrinhoCartaoPagamento.php
+OPERAÇÃO: Requisicao Tid
+RESPOSTA: <?xml version="1.0" encoding="ISO-8859-1"?>
+<retorno-tid id="e4bad7e1381a345ca2af13d8de0182da" versao="1.1.0" xmlns="http://ecommerce.cbmp.com.br">
+  <tid>100699306947D3781001</tid>
+</retorno-tid>
+
+
+***********************************************
+2015-09-28 16:00:33:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/carrinhoCartaoPagamento.php
+OPERAÇÃO: Autorizacao Portador
+ENVIO: <?xml version="1.0" encoding="ISO-8859-1" ?>
+<requisicao-autorizacao-portador id="014992179bcfba5202fc497c2a0dbc06" versao ="1.1.0">
+<tid>100699306947D3781001</tid>
+   <dados-ec>
+      <numero>1006993069</numero>
+      <chave>25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3</chave>
+   </dados-ec>
+   <dados-cartao>
+      <numero>4551870000000183</numero>
+      <validade>201508</validade>
+      <indicador>1</indicador>
+      <codigo-seguranca>973</codigo-seguranca>
+   </dados-cartao>
+   <dados-pedido>
+      <numero>5730023</numero>
+      <valor>10000</valor>
+      <moeda>986</moeda>
+      <data-hora>2015-09-28T16:00:33</data-hora>
+      <idioma>PT</idioma>
+   </dados-pedido>
+   <forma-pagamento>
+      <bandeira>visa</bandeira>
+      <produto>1</produto>
+      <parcelas>1</parcelas>
+   </forma-pagamento>
+   <capturar-automaticamente>false</capturar-automaticamente>
+</requisicao-autorizacao-portador>
+
+***********************************************
+2015-09-28 16:00:33:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/carrinhoCartaoPagamento.php
+OPERAÇÃO: Autorizacao Portador
+RESPOSTA: <?xml version="1.0" encoding="ISO-8859-1"?>
+<transacao versao="1.1.0" id="014992179bcfba5202fc497c2a0dbc06" xmlns="http://ecommerce.cbmp.com.br">
+  <tid>100699306947D3781001</tid>
+  <pan>uv9yI5tkhX9jpuCt+dfrtoSVM4U3gIjvrcwMBfZcadE=</pan>
+  <dados-pedido>
+    <numero>5730023</numero>
+    <valor>10000</valor>
+    <moeda>986</moeda>
+    <data-hora>2015-09-28T16:00:33.687-03:00</data-hora>
+    <idioma>PT</idioma>
+  </dados-pedido>
+  <forma-pagamento>
+    <bandeira>visa</bandeira>
+    <produto>1</produto>
+    <parcelas>1</parcelas>
+  </forma-pagamento>
+  <status>4</status>
+  <autenticacao>
+    <codigo>4</codigo>
+    <mensagem>Transacao sem autenticacao</mensagem>
+    <data-hora>2015-09-28T16:00:33.732-03:00</data-hora>
+    <valor>10000</valor>
+    <eci>7</eci>
+  </autenticacao>
+  <autorizacao>
+    <codigo>4</codigo>
+    <mensagem>Transação autorizada</mensagem>
+    <data-hora>2015-09-28T16:00:33.739-03:00</data-hora>
+    <valor>10000</valor>
+    <lr>00</lr>
+    <arp>123456</arp>
+  </autorizacao>
+</transacao>
+
+
+***********************************************
+2015-09-28 16:00:34:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/retorno.php
+OPERAÇÃO: Consulta
+ENVIO: <?xml version="1.0" encoding="ISO-8859-1" ?>
+<requisicao-consulta id="a58fc66d0049fe4ba0cd96fbca8f2dfc" versao="1.1.0">
+   <tid>100699306947D3781001</tid>
+   <dados-ec>
+      <numero>1006993069</numero>
+      <chave>25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3</chave>
+   </dados-ec>
+</requisicao-consulta>
+
+***********************************************
+2015-09-28 16:00:34:000000 (BRT)
+DO ARQUIVO: /cielo/Cileo_Tecnicos/lojaexemplo-php/pages/retorno.php
+OPERAÇÃO: Consulta
+RESPOSTA: <?xml version="1.0" encoding="ISO-8859-1"?>
+<transacao versao="1.1.0" id="a58fc66d0049fe4ba0cd96fbca8f2dfc" xmlns="http://ecommerce.cbmp.com.br">
+  <tid>100699306947D3781001</tid>
+  <pan>uv9yI5tkhX9jpuCt+dfrtoSVM4U3gIjvrcwMBfZcadE=</pan>
+  <dados-pedido>
+    <numero>5730023</numero>
+    <valor>10000</valor>
+    <moeda>986</moeda>
+    <data-hora>2015-09-28T16:00:33.687-03:00</data-hora>
+    <idioma>PT</idioma>
+  </dados-pedido>
+  <forma-pagamento>
+    <bandeira>visa</bandeira>
+    <produto>1</produto>
+    <parcelas>1</parcelas>
+  </forma-pagamento>
+  <status>4</status>
+  <autenticacao>
+    <codigo>4</codigo>
+    <mensagem>Transacao sem autenticacao</mensagem>
+    <data-hora>2015-09-28T16:00:33.732-03:00</data-hora>
+    <valor>10000</valor>
+    <eci>7</eci>
+  </autenticacao>
+  <autorizacao>
+    <codigo>4</codigo>
+    <mensagem>Transação autorizada</mensagem>
+    <data-hora>2015-09-28T16:00:33.739-03:00</data-hora>
+    <valor>10000</valor>
+    <lr>00</lr>
+    <arp>123456</arp>
+  </autorizacao>
+</transacao>
+
+

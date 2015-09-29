@@ -3,7 +3,7 @@
 ?>
 <html>
 	<head>
-		<title>Loja Exemplo : Cart„o na Loja</title>
+		<title>Loja Exemplo : Cart√£o na Loja</title>
 	</head>
 	<body>
 	Redirecionando...
@@ -11,7 +11,7 @@
 	
 	$Pedido = new Pedido();
 	
-	// LÍ dados do $_POST
+	// L√™ dados do $_POST
 	$Pedido->formaPagamentoBandeira = $_POST["codigoBandeira"]; 
 	if($_POST["formaPagamento"] != "A" && $_POST["formaPagamento"] != "1")
 	{
@@ -33,7 +33,7 @@
 	
 	$Pedido->dadosPortadorNumero = $_POST["cartaoNumero"];
 	$Pedido->dadosPortadorVal = $_POST["cartaoValidade"];
-	// Verifica se CÛdigo de SeguranÁa foi informado e ajusta o indicador corretamente
+	// Verifica se C√≥digo de Seguran√ßa foi informado e ajusta o indicador corretamente
 	if ($_POST["cartaoCodigoSeguranca"] == null || $_POST["cartaoCodigoSeguranca"] == "")
 	{
 		$Pedido->dadosPortadorInd = "0";
@@ -53,12 +53,12 @@
 	
 	$Pedido->urlRetorno = ReturnURL();
 
-	// ENVIA REQUISI«√O SITE CIELO
-	if($_POST["tentarAutenticar"] == "sim") // TRANSA«√O
+	// ENVIA REQUISI√á√ÉO SITE CIELO
+	if($_POST["tentarAutenticar"] == "sim") // TRANSA√á√ÉO
 	{
 		$objResposta = $Pedido->RequisicaoTransacao(true);
 	}
-	else // AUTORIZA«√O DIRETA 
+	else // AUTORIZA√á√ÉO DIRETA 
 	{
 		$objResposta = $Pedido->RequisicaoTid();
 		
@@ -68,6 +68,7 @@
 		
 		$objResposta = $Pedido->RequisicaoAutorizacaoPortador();
 	}
+	
 		
 	$Pedido->tid = $objResposta->tid;
 	$Pedido->pan = $objResposta->pan;
@@ -78,16 +79,17 @@
 	
 	// Serializa Pedido e guarda na SESSION
 	$StrPedido = $Pedido->ToString();
+	
 	$_SESSION["pedidos"]->append($StrPedido);
 	
 	
-	if($_POST["tentarAutenticar"] == "sim") // TRANSA«√O
+	if($_POST["tentarAutenticar"] == "sim") // TRANSA√á√ÉO
 	{
 		echo '<script type="text/javascript">
 				window.location.href = "' . $Pedido->urlAutenticacao . '"
 			 </script>';
 	}
-	else // AUTORIZA«√O DIRETA 
+	else // AUTORIZA√á√ÉO DIRETA 
 	{
 		echo '<script type="text/javascript">
 				window.location.href = "retorno.php"
